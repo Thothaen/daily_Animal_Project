@@ -2,7 +2,7 @@ from init import *
 
 def main():
     
-    with open("all_Animals.csv", newline="", encoding="utf-8") as f: #using utf-8 because csv was exported from excel
+    with open("all_Animals.csv", newline="", encoding="utf-8") as f:
         items = [row[0] for row in csv.reader(f)][1:] #[1:] skips header
         title = wiki_Search(random.choice(items))
         link = "https://en.wikipedia.org/wiki/" + title.replace(" ", "_")
